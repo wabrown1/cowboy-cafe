@@ -4,6 +4,9 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the angry chicken entree
+    /// </summary>
     public class AngryChicken
     {
         /// <summary>
