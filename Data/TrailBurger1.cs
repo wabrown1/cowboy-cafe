@@ -48,11 +48,11 @@ namespace CowboyCafe.Data
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Pickle) { instructions.Add("Hold pickle"); }
-                if (!Bun) { instructions.Add("Hold bun"); }
-                if (!Ketchup) { instructions.Add("Hold ketchup"); }
-                if (!Mustard) { instructions.Add("Hold mustard"); }
-                if (!Cheese) { instructions.Add("Hold cheese"); }
+                if (!Pickle) { instructions.Add("hold pickle"); }
+                if (!Bun) { instructions.Add("hold bun"); }
+                if (!Ketchup) { instructions.Add("hold ketchup"); }
+                if (!Mustard) { instructions.Add("hold mustard"); }
+                if (!Cheese) { instructions.Add("hold cheese"); }
                 return instructions;
             }
         }
