@@ -4,8 +4,14 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    class AngryChicken
+    /// <summary>
+    /// A class representing the angry chicken entree
+    /// </summary>
+    public class AngryChicken
     {
+        /// <summary>
+        /// The price of the entree
+        /// </summary>
         public double Price
         {
             get
@@ -14,6 +20,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// The calories in the angry chicken
+        /// </summary>
         public uint Calories
         {
             get
@@ -22,22 +31,29 @@ namespace CowboyCafe.Data
             }
         }
 
-        public bool Bread { get; set; } = true;
-        public bool Pickle { get; set; } = true;
+        private bool pickle = true;
+        /// <summary>
+        /// If the entree should be served with a pickle
+        /// </summary>
+        public bool Pickle
+        {
+            get { return pickle; }
+            set { pickle = value; }
+        }
 
-        public list<string> SpecialInstructions
+        /// <summary>
+        /// If the entree should be served with bread
+        /// </summary>
+        public bool Bread { get; set; } = true;
+
+        public List<string> SpecialInstructions
         {
             get
             {
-                list<string> instructions = new list<string>();
-                if (!Bread)
-                {
-                    instructions.Add("hold bread");
-                }
-                if (!Pickle)
-                {
-                    instructions.Add("hold pickle");
-                }
+                List<string> instructions = new List<string>();
+                if (!Pickle) { instructions.Add("hold pickle"); }
+                if (!Bread) { instructions.Add("hold bread"); }
+
                 return instructions;
             }
         }
