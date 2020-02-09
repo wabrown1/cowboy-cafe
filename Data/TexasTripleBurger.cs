@@ -1,19 +1,25 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * TexasTripleBurger.cs
+ * Class to define the Texas triple burger entree
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class TexasTripleBurger
+    public class TexasTripleBurger : Entree
     {
         /// <summary>
         /// The price of the entree
         /// </summary>
-        public double Price { get; } = 6.45;
+        public override double Price { get; } = 6.45;
         /// <summary>
         /// The calories in the entree
         /// </summary>
-        public uint Calories { get; } = 698;
+        public override uint Calories { get; } = 698;
 
         /// <summary>
         /// If the burger is served with a pickle
@@ -59,7 +65,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The instructions for preparing the entree
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

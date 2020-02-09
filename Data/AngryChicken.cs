@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * AngryChicken.cs
+ * Class to define the Angry Chicken entree
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,12 +13,12 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the angry chicken entree
     /// </summary>
-    public class AngryChicken
+    public class AngryChicken : Entree
     {
         /// <summary>
         /// The price of the entree
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -23,7 +29,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The calories in the angry chicken
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -46,7 +52,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool Bread { get; set; } = true;
 
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

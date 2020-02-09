@@ -1,7 +1,7 @@
 ﻿/*
  * William Brown
- * ChiliCheeseFries.cs
- * Class to define the chili cheese fries side
+ * BakedBeans.cs
+ * Class to define the baked beans side
  */
 
 using System;
@@ -11,9 +11,9 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// Defines properties of the chili cheese fries side
+    /// Class with properties of the baked beans side
     /// </summary>
-    public class ChiliCheeseFries : Side
+    public class BakedBeans : Side
     {
         /// <summary>
         /// The price of the side
@@ -25,11 +25,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 1.99;
+                        return 1.59;
                     case Size.Medium:
-                        return 2.99;
+                        return 1.79;
                     case Size.Large:
-                        return 3.99;
+                        return 1.99;
                     default:
                         throw new NotImplementedException();
                 }
@@ -46,11 +46,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 433;
+                        return 312;
                     case Size.Medium:
-                        return 524;
+                        return 378;
                     case Size.Large:
-                        return 610;
+                        return 410;
                     default:
                         throw new NotImplementedException();
                 }

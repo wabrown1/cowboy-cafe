@@ -1,7 +1,7 @@
 ﻿/*
  * William Brown
- * ChiliCheeseFries.cs
- * Class to define the chili cheese fries side
+ * CornDodgers.cs
+ * Class to define the corn dodgers side
  */
 
 using System;
@@ -11,9 +11,9 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// Defines properties of the chili cheese fries side
+    /// Defines the properties of the corn dodgers side
     /// </summary>
-    public class ChiliCheeseFries : Side
+    public class CornDodgers : Side
     {
         /// <summary>
         /// The price of the side
@@ -25,11 +25,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 1.99;
+                        return 1.59;
                     case Size.Medium:
-                        return 2.99;
+                        return 1.79;
                     case Size.Large:
-                        return 3.99;
+                        return 1.99;
                     default:
                         throw new NotImplementedException();
                 }
@@ -46,11 +46,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 433;
+                        return 512;
                     case Size.Medium:
-                        return 524;
+                        return 685;
                     case Size.Large:
-                        return 610;
+                        return 717;
                     default:
                         throw new NotImplementedException();
                 }

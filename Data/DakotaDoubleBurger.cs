@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * DakotaDoubleBurger.cs
+ * Class to define the Dakota double burger entree
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,16 +13,16 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Dakota Double Burger entree
     /// </summary>
-    public class DakotaDoubleBurger
+    public class DakotaDoubleBurger : Entree
     {
         /// <summary>
         /// The price of the entree
         /// </summary>
-        public double Price { get; } = 5.2;
+        public override double Price { get; } = 5.2;
         /// <summary>
         /// The calories in the entree
         /// </summary>
-        public uint Calories { get; } = 464;
+        public override uint Calories { get; } = 464;
 
         /// <summary>
         /// If the burger is served with a pickle
@@ -54,7 +60,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The instructions for preparing the entree
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

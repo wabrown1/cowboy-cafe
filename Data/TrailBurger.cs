@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * TrailBurger.cs
+ * Class to define the trail burger entree
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,17 +13,17 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the trailburger entree
     /// </summary>
-    public class TrailBurger
+    public class TrailBurger : Entree
     {
         /// <summary>
         /// The price of the trailburger
         /// </summary>
-        public double Price { get; } = 4.5;
+        public override double Price { get; } = 4.5;
 
         /// <summary>
         /// The calories in the entree
         /// </summary>
-        public uint Calories { get; } = 288;
+        public override uint Calories { get; } = 288;
 
         /// <summary>
         /// If the burger is served with a pickle
@@ -43,7 +49,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The instructions for preparing the entree
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Nathan Bean
+ * Side.cs
+ * Abstract class to define methods and properties to be implemented
+ * by side classes 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

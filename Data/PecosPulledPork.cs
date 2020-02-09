@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * PecosPulledPork.cs
+ * Class to define the pecos pulled pork entree
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,12 +13,12 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the pecos pulled pork entree
     /// </summary>
-    public class PecosPulledPork
+    public class PecosPulledPork : Entree
     {
         /// <summary>
         /// The price of the entree
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -23,7 +29,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The calories in the entree
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get { return 528; }
         }
@@ -39,7 +45,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Instructions for preparing the pulled pork
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
