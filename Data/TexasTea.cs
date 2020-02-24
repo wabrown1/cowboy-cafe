@@ -95,5 +95,18 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Override of the ToString method for use in the wpf
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            if (Sweet)
+            {
+                return $"{Size} Texas Sweet Tea";
+            }
+            return $"{Size} Texas Plain Tea";
+        }
     }
 }

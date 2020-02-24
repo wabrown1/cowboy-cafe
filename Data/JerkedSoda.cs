@@ -76,7 +76,28 @@ namespace CowboyCafe.Data
                 }
                 return instructions;
             }
-        }        
+        }
 
+        /// <summary>
+        /// Override of the ToString method for use in the wpf
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            switch (Flavor)
+            {
+                case SodaFlavor.CreamSoda:
+                    return $"{Size} Cream Soda Jerked Soda";
+                case SodaFlavor.OrangeSoda:
+                    return $"{Size} Orange Soda Jerked Soda";
+                case SodaFlavor.Sarsparilla:
+                    return $"{Size} Sarsparilla Jerked Soda";
+                case SodaFlavor.BirchBeer:
+                    return $"{Size} Birch Beer Jerked Soda";
+                case SodaFlavor.RootBeer:
+                    return $"{Size} Root Beer Jerked Soda";
+            }
+            return $"{Size} {Flavor} Jerked Soda";
+        }
     }
 }

@@ -15,11 +15,31 @@
 
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <TextBlock>Entree</TextBlock>
-            <Button Name="AddCowpokeChili">Cowpoke Chili</Button>
+            <TextBlock HorizontalAlignment="Center" FontSize="25">Entree</TextBlock>
+            <Button Name="AddCowpokeChili" Height="50" FontSize="18">Cowpoke Chili</Button>
+            <Button Name="AddRustlersRibs" Height="50" FontSize="18">Rustlers Ribs</Button>
+            <Button Name="AddPecosPulledPork" Height="50" FontSize="18">Pecos Pulled Pork</Button>
+            <Button Name="AddTrailBurger" Height="50" FontSize="18">Trail Burger</Button>
+            <Button Name="AddDakotaDoubleBurger" Height="50" FontSize="18">Dakota Double</Button>
+            <Button Name="AddTexasTripleBurger" Height="50" FontSize="18">Texas Triple</Button>
+            <Button Name="AddAngryChicken" Height="50" FontSize="18">Angry Chicken</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock HorizontalAlignment="Center" FontSize="25">Sides</TextBlock>
+            <Button Name="AddChiliCheeseFries" Height="50" FontSize="18">Chili Cheese Fries</Button>
+            <Button Name="AddCornDodgers" Height="50" FontSize="18">Corn Dodgers</Button>
+            <Button Name="AddPanDeCampo" Height="50" FontSize="18">Pan De Campo</Button>
+            <Button Name="AddBakedBeans" Height="50" FontSize="18">BakedBeans</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock HorizontalAlignment="Center" FontSize="25">Drinks</TextBlock>
+            <Button Name="AddJerkedSoda" Height="50" FontSize="18">Jerked Soda</Button>
+            <Button Name="AddTexasTea" Height="50" FontSize="18">Texas Tea</Button>
+            <Button Name="AddCowboyCoffee" Height="50" FontSize="18">Cowboy Coffee</Button>
+            <Button Name="AddWater" Height="50" FontSize="18">Water</Button>
         </StackPanel>
         <StackPanel Grid.Column="3">
-            <TextBlock>Order</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="25">Order</TextBlock>
             <ListView Name="OrderListView"></ListView>
         </StackPanel>
     </Grid>

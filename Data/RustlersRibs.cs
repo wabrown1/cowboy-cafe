@@ -46,5 +46,14 @@ namespace CowboyCafe.Data
                 return new List<string>();
             }
         }
+
+        /// <summary>
+        /// Override of the ToString method for use in the wpf
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Rustler's Ribs";
+        }
     }
 }
