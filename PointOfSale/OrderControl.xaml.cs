@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * OrderControl.cs
+ * Class to handle to order control user interface
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,6 +25,9 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        /// Constructor to create event listeners for each button
+        /// </summary>
         public OrderControl()
         {
             InitializeComponent();
@@ -38,6 +47,8 @@ namespace PointOfSale
             AddCowboyCoffee.Click += OnAddCowboyCoffeeButtonClicked;
             AddWater.Click += OnAddWaterButtonClicked;
         }
+
+        //Event listeners for each of the buttons in order control
 
         void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
         {
