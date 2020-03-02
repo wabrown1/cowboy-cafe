@@ -14,7 +14,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class defining properties an entree must have
     /// </summary>
-    public abstract class Entree
+    public abstract class Entree : IOrderItem
     {
         /// <summary>
         /// The price of the entree

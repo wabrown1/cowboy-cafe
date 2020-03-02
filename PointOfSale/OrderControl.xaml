@@ -11,7 +11,6 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
@@ -37,10 +36,6 @@
             <Button Name="AddTexasTea" Height="50" FontSize="18">Texas Tea</Button>
             <Button Name="AddCowboyCoffee" Height="50" FontSize="18">Cowboy Coffee</Button>
             <Button Name="AddWater" Height="50" FontSize="18">Water</Button>
-        </StackPanel>
-        <StackPanel Grid.Column="3">
-            <TextBlock HorizontalAlignment="Center" FontSize="25">Order</TextBlock>
-            <ListView Name="OrderListView"></ListView>
         </StackPanel>
     </Grid>
 </UserControl>
