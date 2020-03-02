@@ -11,8 +11,10 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
+        <local:OrderSummaryControl Grid.Column="3"/>
         <StackPanel Grid.Column="0">
             <TextBlock HorizontalAlignment="Center" FontSize="25">Entree</TextBlock>
             <Button Name="AddCowpokeChili" Height="50" FontSize="18">Cowpoke Chili</Button>
