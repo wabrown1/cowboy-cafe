@@ -7,24 +7,6 @@
         mc:Ignorable="d"
         Title="Cowboy Cafe" Height="500" Width="800">
     <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <local:OrderControl Grid.Row="1"/>
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Name="ItemSelectionButton" FontSize="20" Grid.Column="0">ItemSelection</Button>
-                <Button Name="CancelOrderButton" FontSize="20" Grid.Column="1">CancelOrder</Button>
-                <Button Name="CompleteOrderButton" FontSize="20" Grid.Column="2">CompleteOrder</Button>
-            </Grid>
-        </Grid>
-        
-        
+        <local:OrderControl/>
     </Grid>
 </Window>
