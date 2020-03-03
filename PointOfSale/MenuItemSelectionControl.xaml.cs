@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * MenuItemSelectionControl.xaml.cs
+ * Class created event handlers for the user interface elements if the menu item selection control
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,7 +25,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
-        //Order o = new Order();
+        /// <summary>
+        /// Constructor to create event handlers
+        /// </summary>
         public MenuItemSelectionControl()
         {
             InitializeComponent();

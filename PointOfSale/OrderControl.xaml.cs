@@ -24,12 +24,12 @@ namespace PointOfSale
     /// Interaction logic for OrderControl.xaml
     /// </summary>
     public partial class OrderControl : UserControl
-    {
+    {        
+        Order o = new Order();
+
         /// <summary>
         /// Constructor to create event listeners for each button
         /// </summary>
-        
-        Order o = new Order();
         public OrderControl()
         {
             InitializeComponent();
@@ -38,11 +38,21 @@ namespace PointOfSale
             CompleteOrderButton.Click += OnCompleteOrderButtonClicked;
         }
 
+        /// <summary>
+        /// Clears the order when the cancel button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnCancelOrderButtonClicked(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
         }
 
+        /// <summary>
+        /// Clears the order when the complete order button is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
