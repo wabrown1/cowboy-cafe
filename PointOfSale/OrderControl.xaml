@@ -16,7 +16,13 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <local:MenuItemSelectionControl Grid.Row="1"/>
+
+            <Border x:Name="Container" Grid.Column="0" Grid.Row="1">
+                <local:MenuItemSelectionControl Grid.Row="1"/>
+                
+            </Border>
+            
+            
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>

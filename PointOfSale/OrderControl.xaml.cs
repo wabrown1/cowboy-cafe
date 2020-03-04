@@ -36,7 +36,8 @@ namespace PointOfSale
             this.DataContext = o;
             CancelOrderButton.Click += OnCancelOrderButtonClicked;
             CompleteOrderButton.Click += OnCompleteOrderButtonClicked;
-        }
+            ItemSelectionButton.Click += OnItemSelectionButtonClicked;
+        }        
 
         /// <summary>
         /// Clears the order when the cancel button is clicked
@@ -45,7 +46,9 @@ namespace PointOfSale
         /// <param name="e"></param>
         public void OnCancelOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            this.DataContext = new Order();
+            //this.DataContext = new Order();
+            //CowboyCafe.Data.Order.OrderNumber
+            this.DataContext = new Order(1);
         }
 
         /// <summary>
@@ -56,6 +59,16 @@ namespace PointOfSale
         public void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
+        }
+
+        public void SwapScreen(UIElement element)
+        {
+            Container.Child = element;
+        }
+
+        public void OnItemSelectionButtonClicked(object sender, RoutedEventArgs e)
+        {
+            SwapScreen(new MenuItemSelectionControl());
         }
     }
 }

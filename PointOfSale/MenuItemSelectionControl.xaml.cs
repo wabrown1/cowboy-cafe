@@ -25,12 +25,15 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
+        private OrderControl orderControl;
+
         /// <summary>
         /// Constructor to create event handlers
         /// </summary>
         public MenuItemSelectionControl()
         {
             InitializeComponent();
+            
             //this.DataContext = o;
             AddCowpokeChili.Click += OnAddCowpokeChiliButtonClicked;
             AddRustlersRibs.Click += OnAddRustlersRibsButtonClicked;
@@ -49,13 +52,34 @@ namespace PointOfSale
             AddWater.Click += OnAddWaterButtonClicked;
         }
 
+        /*void OnItemAddButtonClicked(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is Order order)
+            {
+                if (sender is Button button)
+                {
+                    switch (button.Tag)
+                    {
+                        case "CowpokeChili":
+                            order.Add(new CowpokeChili);
+                            break;
+                    }
+                }
+            }
+        }*/
+
         //Event listeners for each of the buttons in order control
 
         void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
         {
-            if(DataContext is Order order)
+            orderControl = this.FindAncestor<OrderControl>();
+            if (DataContext is Order order)
             {
-                order.Add(new CowpokeChili());
+                var entree = new CowpokeChili();
+                var screen = new CustomizeCowpokeChili();
+                screen.DataContext = entree;
+                order.Add(entree);
+                orderControl.SwapScreen(screen);
             }
             //o.Add(new CowpokeChili());
         }

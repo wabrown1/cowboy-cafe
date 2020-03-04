@@ -13,6 +13,16 @@ namespace CowboyCafe.Data
 {
     public class Order : INotifyPropertyChanged
     {
+        public Order()
+        {
+            ++orderNumber;
+        }
+
+        public Order(uint orderNum)
+        {
+            //orderNumber = orderNum;
+        }
+
         static uint orderNumber = 0;
         /// <summary>
         /// The number of the order, updated every time a new order is created
@@ -21,7 +31,8 @@ namespace CowboyCafe.Data
         {
             get
             {
-                return ++orderNumber;
+                return orderNumber;
+                //return ++orderNumber;
             }
         }
 
