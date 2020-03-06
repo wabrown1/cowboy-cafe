@@ -70,6 +70,22 @@ namespace PointOfSale
 
         //Event listeners for each of the buttons in order control
 
+        void AddItemAndOpenCustomizationScreen(IOrderItem item, FrameworkElement screen)
+        {
+            var order = DataContext as Order;
+            if (order == null) throw new Exception("Data context null, expected to be an order instance");
+
+            if(screen != null)
+            {
+                var orderControl = this.FindAncestor<OrderControl>();
+                if (orderControl == null) throw new Exception("An ancetor of OrderControl ex");
+
+                screen.DataContext = item;
+                orderControl.SwapScreen(screen);
+            }
+            order.Add(item);
+        }
+
         void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
         {
             orderControl = this.FindAncestor<OrderControl>();

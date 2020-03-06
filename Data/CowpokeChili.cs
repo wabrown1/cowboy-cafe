@@ -6,15 +6,15 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Cowpoke Chili entree
     /// </summary>
-    public class CowpokeChili : Entree, INotifyPropertyChanged
-    {
+    public class CowpokeChili : Entree
+    {      
         private bool cheese = true;
         /// <summary>
         /// If the chili is topped with cheese
@@ -22,7 +22,13 @@ namespace CowboyCafe.Data
         public bool Cheese
         {
             get { return cheese; }
-            set { cheese = value; }
+            set 
+            { 
+                cheese = value;
+                NotifyOfPropertyChange("Cheese");
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         private bool sourCream = true;
@@ -32,7 +38,11 @@ namespace CowboyCafe.Data
         public bool SourCream
         {
             get { return sourCream; }
-            set { sourCream = value; }
+            set 
+            { 
+                sourCream = value;
+                NotifyOfPropertyChange("SourCream");
+            }
         }
 
         private bool greenOnions = true;
@@ -45,21 +55,22 @@ namespace CowboyCafe.Data
             set
             {
                 greenOnions = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("greenOnions"));
+                NotifyOfPropertyChange("GreeOnions");
             }                 
         }
 
-        private bool tortillaStrips = true;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
+        private bool tortillaStrips = true;     
         /// <summary>
         /// If the chili is topped with tortilla strips
         /// </summary>
         public bool TortillaStrips
         {
             get { return tortillaStrips; }
-            set { tortillaStrips = value; }
+            set
+            { 
+                tortillaStrips = value;
+                NotifyOfPropertyChange("TortiallaStrips");
+            }
         }
 
         /// <summary>
@@ -106,6 +117,8 @@ namespace CowboyCafe.Data
         {
             return "Cowpoke Chili";
         }
+
+
     }
 }
 
