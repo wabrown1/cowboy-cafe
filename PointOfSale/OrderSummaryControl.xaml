@@ -27,7 +27,7 @@
             <TextBox Grid.Column="1" Text="{Binding Path=Subtotal, StringFormat=c, Mode=OneWay}"/>
         </Grid>
 
-        <StackPanel Grid.Row="1">
+        <ScrollViewer Grid.Row="1">
             <ListBox ItemsSource="{Binding Path=Items}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -48,7 +48,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-        </StackPanel>
+        </ScrollViewer>
 
     </Grid>
 </UserControl>

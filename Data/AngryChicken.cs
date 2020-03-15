@@ -44,13 +44,26 @@ namespace CowboyCafe.Data
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set
+            {
+                pickle = value;
+                NotifyOfPropertyChange("Pickle");
+            }
         }
 
+        private bool bread = true;
         /// <summary>
         /// If the entree should be served with bread
         /// </summary>
-        public bool Bread { get; set; } = true;
+        public bool Bread
+        {
+            get { return bread; }
+            set
+            {
+                bread = value;
+                NotifyOfPropertyChange("Bread");
+            }
+        }
 
         public override List<string> SpecialInstructions
         {

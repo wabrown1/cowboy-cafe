@@ -104,9 +104,18 @@ namespace PointOfSale
         {
             //OrderListView.Items.Add(new ChiliCheeseFries());
             //o.Add(new ChiliCheeseFries());
-            if (DataContext is Order order)
+            /*if (DataContext is Order order)
             {
                 order.Add(new ChiliCheeseFries());
+            }*/
+            orderControl = this.FindAncestor<OrderControl>();
+            if (DataContext is Order order)
+            {
+                var side = new ChiliCheeseFries();
+                var screen = new CustomizeSide();
+                screen.DataContext = side;
+                order.Add(side);
+                orderControl.SwapScreen(screen);
             }
         }
         void OnAddRustlersRibsButtonClicked(object sender, RoutedEventArgs e)
@@ -121,108 +130,168 @@ namespace PointOfSale
         void OnAddPecosPulledPorkButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new PecosPulledPork());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new PecosPulledPork());
+                var entree = new PecosPulledPork();
+                var screen = new CustomizePecosPulledPork();
+                screen.DataContext = entree;
+                order.Add(entree);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddTrailBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new TrailBurger());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new TrailBurger());
+                var entree = new TrailBurger();
+                var screen = new CustomizeTrailBurger();
+                screen.DataContext = entree;
+                order.Add(entree);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddDakotaDoubleBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new DakotaDoubleBurger());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new DakotaDoubleBurger());
+                var entree = new DakotaDoubleBurger();
+                var screen = new CustomizeDakotaDoubleBurger();
+                screen.DataContext = entree;
+                order.Add(entree);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddTexasTripleBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new TexasTripleBurger());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new TexasTripleBurger());
+                var entree = new TexasTripleBurger();
+                var screen = new CustomizeTexasTripleBurger();
+                screen.DataContext = entree;
+                order.Add(entree);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddAngryChickenButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new AngryChicken());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new AngryChicken());
+                var entree = new AngryChicken();
+                var screen = new CustomizeAngryChicken();
+                screen.DataContext = entree;
+                order.Add(entree);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddCornDodgersButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new CornDodgers());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new CornDodgers());
+                var side = new CornDodgers();
+                var screen = new CustomizeSide();
+                screen.DataContext = side;
+                order.Add(side);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddPanDeCampoButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new PanDeCampo());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new PanDeCampo());
+                var side = new PanDeCampo();
+                var screen = new CustomizeSide();
+                screen.DataContext = side;
+                order.Add(side);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddBakedBeansButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new BakedBeans());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new BakedBeans());
+                var side = new BakedBeans();
+                var screen = new CustomizeSide();
+                screen.DataContext = side;
+                order.Add(side);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new JerkedSoda());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new JerkedSoda());
+                var drink = new JerkedSoda();
+                var screen = new CustomizeJerkedSoda();
+                screen.DataContext = drink;
+                order.Add(drink);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new TexasTea());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new TexasTea());
+                var drink = new TexasTea();
+                var screen = new CustomizeTexasTea();
+                screen.DataContext = drink;
+                order.Add(drink);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new CowboyCoffee());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new CowboyCoffee());
+                var drink = new CowboyCoffee();
+                var screen = new CustomizeCowboyCoffee();
+                screen.DataContext = drink;
+                order.Add(drink);
+                orderControl.SwapScreen(screen);
             }
         }
 
         void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
         {
             //o.Add(new Water());
+            orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new Water());
+                var drink = new Water();
+                var screen = new CustomizeWater();
+                screen.DataContext = drink;
+                order.Add(drink);
+                orderControl.SwapScreen(screen);
             }
         }
     }

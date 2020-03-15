@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PointOfSale.CustomizeJerkedSoda"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="30" Text="Customize Jerked Soda" Grid.Row="0" Grid.ColumnSpan="3"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock FontSize="30" Text="Select Size"/>
+            <RadioButton x:Name="SmallButton" IsChecked="True" FontSize="35">Small</RadioButton>
+            <RadioButton x:Name="MediumButton" FontSize="35">Medium</RadioButton>
+            <RadioButton x:Name="LargeButton" FontSize="35">Large</RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock FontSize="30" Text="Select Flavor"/>
+            <RadioButton x:Name="CreamSodaButton" IsChecked="True" FontSize="35">Cream Soda</RadioButton>
+            <RadioButton x:Name="OrangeSodaButton" FontSize="35">Orange Soda</RadioButton>
+            <RadioButton x:Name="SarsparillaButton" FontSize="35">Sarsparilla</RadioButton>
+            <RadioButton x:Name="BirchBeerButton" FontSize="35">Birch Beer</RadioButton>
+            <RadioButton x:Name="RootBeerButton" FontSize="35">Root Beer</RadioButton>            
+        </StackPanel>
+        <CheckBox Grid.Column="2" Grid.Row="1" IsChecked="{Binding Path=Ice}" FontSize="35">Ice</CheckBox>
+    </Grid>
+</UserControl>
