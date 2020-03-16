@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * CustomizeJerkedSoda.cs
+ * Class to define behavior of buttons in the CustomizeJerkedSoda interface
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -34,6 +40,7 @@ namespace PointOfSale
             RootBeerButton.Click += OnRootBeerButtonClicked;
         }
 
+        //Event handlers for selecting a size of flavor
         public void OnSmallButtonClicked(object sender, RoutedEventArgs e)
         {
             if (DataContext is Drink drink)

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * CustomizeCowboyCoffee.cs
+ * Class to define behavior of buttons in the CowboyCoffee interface
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -28,6 +34,7 @@ namespace PointOfSale
             LargeButton.Click += OnLargeButtonClicked;
         }
 
+        //Event handlers for the buttons in the user control
         public void OnSmallButtonClicked(object sender, RoutedEventArgs e)
         {
             if (DataContext is Drink drink)

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * CustomizeSida.cs
+ * Class to define behavior of buttons in the CustomizeSide interface
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -29,6 +35,7 @@ namespace PointOfSale
             LargeButton.Click += OnLargeButtonClicked;
         }
 
+        //Event handlers for selecting a different size side
         public void OnSmallButtonClicked(object sender, RoutedEventArgs e)
         {
             if(DataContext is Side side)

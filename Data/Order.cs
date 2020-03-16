@@ -18,6 +18,12 @@ namespace CowboyCafe.Data
             ++orderNumber;
         }
 
+        /// <summary>
+        /// Constructor with different method signature so that a new order
+        /// can be created without incrementing the order num when canceling and order
+        /// </summary>
+        /// <param name="orderNum">An unused variable that is needed so that the constructor has
+        /// a different method signature than the above constructor</param>
         public Order(uint orderNum)
         {
             //orderNumber = orderNum;
