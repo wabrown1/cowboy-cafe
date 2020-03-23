@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * ExtensionMethods.cs
+ * Class to contain extra methods
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

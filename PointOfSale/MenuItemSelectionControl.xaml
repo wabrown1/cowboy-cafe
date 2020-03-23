@@ -28,7 +28,7 @@
             <Button Name="AddChiliCheeseFries" Height="50" FontSize="18">Chili Cheese Fries</Button>
             <Button Name="AddCornDodgers" Height="50" FontSize="18">Corn Dodgers</Button>
             <Button Name="AddPanDeCampo" Height="50" FontSize="18">Pan De Campo</Button>
-            <Button Name="AddBakedBeans" Height="50" FontSize="18">BakedBeans</Button>
+            <Button Name="AddBakedBeans" Height="50" FontSize="18">Baked Beans</Button>
         </StackPanel>
         <StackPanel Grid.Column="2">
             <TextBlock HorizontalAlignment="Center" FontSize="25">Drinks</TextBlock>
