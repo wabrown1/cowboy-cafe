@@ -43,7 +43,8 @@
                             <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding}"/>
 
                             <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Text="{Binding Path=Price, StringFormat=c}"/>
-                            <Button x:Name="DeleteItemButton" Click="OnDeleteItemButtonClicked" Grid.Column="1" Grid.Row="0" Content="X" HorizontalAlignment="Right" FontSize="15" Width="40"/>
+                            <Button x:Name="DeleteItemButton" Click="OnDeleteItemButtonClicked" Grid.Column="1" Grid.Row="0" Content="X" 
+                                    HorizontalAlignment="Right" FontSize="15" Width="40" Background="Red"/>
                             <ListView Grid.Row="1" Grid.ColumnSpan="2"  ItemsSource="{Binding Path=SpecialInstructions}"/>
                         </Grid>                        
                     </DataTemplate>

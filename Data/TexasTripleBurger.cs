@@ -15,11 +15,11 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The price of the entree
         /// </summary>
-        public override double Price { get; } = 5.2;
+        public override double Price { get; } = 6.45;
         /// <summary>
         /// The calories in the entree
         /// </summary>
-        public override uint Calories { get; } = 464;
+        public override uint Calories { get; } = 698;
 
         private bool pickle = true;
         /// <summary>
