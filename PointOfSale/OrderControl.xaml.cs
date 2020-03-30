@@ -37,6 +37,8 @@ namespace PointOfSale
             CancelOrderButton.Click += OnCancelOrderButtonClicked;
             CompleteOrderButton.Click += OnCompleteOrderButtonClicked;
             ItemSelectionButton.Click += OnItemSelectionButtonClicked;
+
+            //OrderSummaryControl.ItemsList.SelectionChanged += OnListBoxItemSelected;
         }        
 
         /// <summary>
