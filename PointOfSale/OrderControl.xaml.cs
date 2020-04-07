@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using CashRegister;
 
 namespace PointOfSale
 {
@@ -39,7 +40,11 @@ namespace PointOfSale
             ItemSelectionButton.Click += OnItemSelectionButtonClicked;
 
             //OrderSummaryControl.ItemsList.SelectionChanged += OnListBoxItemSelected;
-        }        
+        }
+        /// <summary>
+        /// The same cash drawer to be used for every order
+        /// </summary>
+        public static CashDrawer CashDrawer = new CashDrawer();
 
         /// <summary>
         /// Clears the order when the cancel button is clicked
@@ -51,6 +56,7 @@ namespace PointOfSale
             //this.DataContext = new Order();
             //CowboyCafe.Data.Order.OrderNumber
             this.DataContext = new Order(1);
+            SwapScreen(new MenuItemSelectionControl());
         }
 
         /// <summary>
@@ -60,11 +66,12 @@ namespace PointOfSale
         /// <param name="e"></param>
         public void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            this.DataContext = new Order();
+            //this.DataContext = new Order();
+            SwapScreen(new TransactionControl());
         }
 
-        //public void SwapScreen(UIElement element)
-        public void SwapScreen(FrameworkElement element)
+        //public void SwapScreen(FrameworkElement element)
+        public void SwapScreen(UIElement element)
         {
             Container.Child = element;
         }

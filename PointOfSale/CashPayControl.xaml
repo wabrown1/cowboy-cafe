@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="PointOfSale.CashPayControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="CurrencyGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="SubmitButton" Grid.Row="0" Grid.Column="6" Content="Submit" FontSize="15" IsEnabled="False" Height="75" VerticalAlignment="Top"></Button>
+        <StackPanel Grid.Row="0" Grid.Column="6" VerticalAlignment="Bottom">
+            <TextBlock Text="Total paid:"/>
+            <TextBlock Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:CashPayControl}}, Path=CashPaid, StringFormat=c}"  FontSize="15"/>
+        </StackPanel>
+
+        <local:CoinControl Denomination="Penny" x:Name="PennyControl" BorderThickness="5" Grid.Column="0"></local:CoinControl>
+        <local:CoinControl Denomination="Nickel" x:Name="NickelControl" BorderThickness="5" Grid.Column="1"></local:CoinControl>
+        <local:CoinControl Denomination="Dime" x:Name="DimeControl" BorderThickness="5" Grid.Column="2"></local:CoinControl>
+        <local:CoinControl Denomination="Quarter" x:Name="QuarterControl" BorderThickness="5" Grid.Column="3"></local:CoinControl>
+        <local:CoinControl Denomination="HalfDollar" x:Name="HalfDollarControl" BorderThickness="5" Grid.Column="4"></local:CoinControl>
+        <local:CoinControl Denomination="Dollar" x:Name="DollarControl" BorderThickness="5" Grid.Column="5"></local:CoinControl>
+
+        <local:BillControl Denomination="One" x:Name="OneControl" BorderThickness="5" Grid.Row="1" Grid.Column="0"></local:BillControl>
+        <local:BillControl Denomination="Two" x:Name="TwoControl" BorderThickness="5" Grid.Row="1" Grid.Column="1"></local:BillControl>
+        <local:BillControl Denomination="Five" x:Name="FiveControl" BorderThickness="5" Grid.Row="1" Grid.Column="2"></local:BillControl>
+        <local:BillControl Denomination="Ten" x:Name="TenControl" BorderThickness="5" Grid.Row="1" Grid.Column="3"></local:BillControl>
+        <local:BillControl Denomination="Twenty" x:Name="TwentyControl" BorderThickness="5" Grid.Row="1" Grid.Column="4"></local:BillControl>
+        <local:BillControl Denomination="Fifty" x:Name="FiftyControl" BorderThickness="5" Grid.Row="1" Grid.Column="5"></local:BillControl>
+        <local:BillControl Denomination="Hundred" x:Name="HundredControl" BorderThickness="5" Grid.Row="1" Grid.Column="6"></local:BillControl>
+    </Grid>
+</UserControl>

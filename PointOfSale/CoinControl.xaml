@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="PointOfSale.CoinControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>            
+        </Grid.RowDefinitions>
+        
+        <TextBlock x:Name="DenominationTextBlock" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:CoinControl}}, Path=Denomination}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"/>
+        <Button x:Name="DecreaseButton" Content="-" Grid.Row="1" Grid.Column="0" FontSize="30" />
+        <Button x:Name="IncreaseButton" Content="+" Grid.Row="1" Grid.Column="2" FontSize="30" VerticalContentAlignment="Center"/>
+        <TextBlock x:Name="AmountTextBlock" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:CoinControl}}, Path=Quantity}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15"/>
+
+    </Grid>
+</UserControl>
