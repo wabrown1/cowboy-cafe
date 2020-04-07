@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using Size = CowboyCafe.Data.Size;
 
 namespace PointOfSale
 {
@@ -33,6 +34,7 @@ namespace PointOfSale
             SmallButton.Click += OnSmallButtonClicked;
             MediumButton.Click += OnMediumButtonClicked;
             LargeButton.Click += OnLargeButtonClicked;
+            //SetButton();
         }
 
         //Event handlers for selecting a different size side
@@ -59,5 +61,37 @@ namespace PointOfSale
                 side.Size = CowboyCafe.Data.Size.Large;
             }
         }
+
+        /// <summary>
+        /// Selects the correct button when returning to the item customization
+        /// </summary>
+        public void SetButton()
+        {
+            Size s;
+            if (DataContext is Side si)
+            {
+                si = (Side)DataContext;
+                s = si.Size;
+            }
+            else
+            {
+                throw new NotImplementedException("Should never be reached");
+            }
+
+            switch (s)
+            {
+                case Size.Small:
+                    SmallButton.IsChecked = true;
+                    break;
+                case Size.Medium:
+                    MediumButton.IsChecked = true;
+                    break;
+                case Size.Large:
+                    LargeButton.IsChecked = true;
+                    break;
+                default:
+                    throw new NotImplementedException("Should never be reached");
+            }
+        }//SetButton
     }
 }

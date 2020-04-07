@@ -33,7 +33,7 @@
                 <Button Name="CompleteOrderButton" FontSize="20" Grid.Column="2">Complete Order</Button>
             </Grid>
         </Grid>
-        <local:OrderSummaryControl Grid.Column="1"/>
+        <local:OrderSummaryControl x:Name="orderSummary" Grid.Column="1"/>
     </Grid>
 
 </UserControl>

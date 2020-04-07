@@ -9,9 +9,9 @@
     <StackPanel>
         <TextBlock FontSize="30" Text="Customize Side"/>
         <StackPanel>
-            <RadioButton x:Name="SmallButton" IsChecked="True" FontSize="35">Small</RadioButton>
-            <RadioButton x:Name="MediumButton" FontSize="35">Medium</RadioButton>
-            <RadioButton x:Name="LargeButton" FontSize="35">Large</RadioButton>
+            <RadioButton x:Name="SmallButton" IsChecked="True" GroupName="Size" FontSize="35">Small</RadioButton>
+            <RadioButton x:Name="MediumButton" GroupName="Size" FontSize="35">Medium</RadioButton>
+            <RadioButton x:Name="LargeButton" GroupName="Size" FontSize="35">Large</RadioButton>
         </StackPanel>
 
     </StackPanel>

@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using Size = CowboyCafe.Data.Size;
 
 namespace PointOfSale
 {
@@ -57,6 +58,7 @@ namespace PointOfSale
                     {
                         var screen = new CustomizeCowboyCoffee();
                         screen.DataContext = c;
+                        screen.SetButton();
                         orderControl = this.FindAncestor<OrderControl>();
                         orderControl.SwapScreen(screen);
                     }
@@ -78,6 +80,8 @@ namespace PointOfSale
                     {
                         var screen = new CustomizeJerkedSoda();
                         screen.DataContext = soda;
+                        screen.SetButton();
+                        screen.SetFlavorButton();
                         orderControl = this.FindAncestor<OrderControl>();
                         orderControl.SwapScreen(screen);
                     }
@@ -92,6 +96,7 @@ namespace PointOfSale
                     {
                         var screen = new CustomizeSide();
                         screen.DataContext = s;
+                        screen.SetButton();                    //sets the correct radio button to be checked
                         orderControl = this.FindAncestor<OrderControl>();
                         orderControl.SwapScreen(screen);
                     }
@@ -99,6 +104,7 @@ namespace PointOfSale
                     {
                         var screen = new CustomizeTexasTea();
                         screen.DataContext = t;
+                        screen.SetButton();
                         orderControl = this.FindAncestor<OrderControl>();
                         orderControl.SwapScreen(screen);
                     }
@@ -120,11 +126,13 @@ namespace PointOfSale
                     {
                         var screen = new CustomizeWater();
                         screen.DataContext = w;
+                        screen.SetButton();
                         orderControl = this.FindAncestor<OrderControl>();
                         orderControl.SwapScreen(screen);
-                    }
+                    }                    
                 }
             }
         }
+
     }
 }
