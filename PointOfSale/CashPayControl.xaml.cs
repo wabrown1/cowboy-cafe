@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * CoinControl.xaml.cs
+ * Class to control interactions between the amount paid
+ * and the amount in the register
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -153,27 +160,27 @@ namespace PointOfSale
                         switch (c.Denomination)
                         {
                             case Coins.Penny:
-                                OrderControl.CashDrawer.AddCoin(CashRegister.Coins.Penny, c.Quantity);
+                                OrderControl.CashDrawer.AddCoin(Coins.Penny, c.Quantity);
                                 c.Quantity = 0;
                                 break;
                             case Coins.Nickel:
-                                OrderControl.CashDrawer.AddCoin(CashRegister.Coins.Nickel, c.Quantity);
+                                OrderControl.CashDrawer.AddCoin(Coins.Nickel, c.Quantity);
                                 c.Quantity = 0;
                                 break;
                             case Coins.Dime:
-                                OrderControl.CashDrawer.AddCoin(CashRegister.Coins.Dime, c.Quantity);
+                                OrderControl.CashDrawer.AddCoin(Coins.Dime, c.Quantity);
                                 c.Quantity = 0;
                                 break;
                             case Coins.Quarter:
-                                OrderControl.CashDrawer.AddCoin(CashRegister.Coins.Quarter, c.Quantity);
+                                OrderControl.CashDrawer.AddCoin(Coins.Quarter, c.Quantity);
                                 c.Quantity = 0;
                                 break;
                             case Coins.HalfDollar:
-                                OrderControl.CashDrawer.AddCoin(CashRegister.Coins.HalfDollar, c.Quantity);
+                                OrderControl.CashDrawer.AddCoin(Coins.HalfDollar, c.Quantity);
                                 c.Quantity = 0;
                                 break;
                             case Coins.Dollar:
-                                OrderControl.CashDrawer.AddCoin(CashRegister.Coins.Dollar, c.Quantity);
+                                OrderControl.CashDrawer.AddCoin(Coins.Dollar, c.Quantity);
                                 c.Quantity = 0;
                                 break;
                         }
@@ -183,31 +190,31 @@ namespace PointOfSale
                         switch (b.Denomination)
                         {
                             case Bills.One:
-                                OrderControl.CashDrawer.AddBill(CashRegister.Bills.One, b.Quantity);
+                                OrderControl.CashDrawer.AddBill(Bills.One, b.Quantity);
                                 b.Quantity = 0;
                                 break;
                             case Bills.Two:
-                                OrderControl.CashDrawer.AddBill(CashRegister.Bills.Two, b.Quantity);
+                                OrderControl.CashDrawer.AddBill(Bills.Two, b.Quantity);
                                 b.Quantity = 0;
                                 break;
                             case Bills.Five:
-                                OrderControl.CashDrawer.AddBill(CashRegister.Bills.Five, b.Quantity);
+                                OrderControl.CashDrawer.AddBill(Bills.Five, b.Quantity);
                                 b.Quantity = 0;
                                 break;
                             case Bills.Ten:
-                                OrderControl.CashDrawer.AddBill(CashRegister.Bills.Ten, b.Quantity);
+                                OrderControl.CashDrawer.AddBill(Bills.Ten, b.Quantity);
                                 b.Quantity = 0;
                                 break;
                             case Bills.Twenty:
-                                OrderControl.CashDrawer.AddBill(CashRegister.Bills.Twenty, b.Quantity);
+                                OrderControl.CashDrawer.AddBill(Bills.Twenty, b.Quantity);
                                 b.Quantity = 0;
                                 break;
                             case Bills.Fifty:
-                                OrderControl.CashDrawer.AddBill(CashRegister.Bills.Fifty, b.Quantity);
+                                OrderControl.CashDrawer.AddBill(Bills.Fifty, b.Quantity);
                                 b.Quantity = 0;
                                 break;
                             case Bills.Hundred:
-                                OrderControl.CashDrawer.AddBill(CashRegister.Bills.Hundred, b.Quantity);
+                                OrderControl.CashDrawer.AddBill(Bills.Hundred, b.Quantity);
                                 b.Quantity = 0;
                                 break;
                         }

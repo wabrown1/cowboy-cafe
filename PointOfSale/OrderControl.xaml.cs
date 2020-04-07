@@ -47,6 +47,11 @@ namespace PointOfSale
         public static CashDrawer CashDrawer = new CashDrawer();
 
         /// <summary>
+        /// The total current value of the drawer
+        /// </summary>
+        public double TotalValue => CashDrawer.TotalValue;
+
+        /// <summary>
         /// Clears the order when the cancel button is clicked
         /// </summary>
         /// <param name="sender"></param>

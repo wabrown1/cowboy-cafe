@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * CoinControl.xaml.cs
+ * Class to control interactions between the data and coin control gui
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -69,12 +75,22 @@ namespace PointOfSale
             DecreaseButton.Click += OnDecreaseClicked;
         }
 
+        /// <summary>
+        /// Event handler for increasing the number of coins
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnIncreaseClicked(object sender, RoutedEventArgs e)
         {
             Quantity++;
             QuantityChanged?.Invoke(this, new EventArgs());
         }
 
+        /// <summary>
+        /// Event handler for decreasing the number of coins
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnDecreaseClicked(object sender, RoutedEventArgs e)
         {
             if (Quantity > 0)

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * William Brown
+ * CoinControl.xaml.cs
+ * Class to control transactions with the cash register
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
