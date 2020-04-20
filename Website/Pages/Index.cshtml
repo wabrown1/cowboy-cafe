@@ -1,0 +1,89 @@
+﻿@page
+@using CowboyCafe.Data;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Cowboy Cafe</h1>
+    <p>
+        We at Cowboy Cafe are proud to bring you authentic trail meals from the American West.
+        Shake off the dust on your boots and sake your thirst with one of our old-fashioned
+        hand-jerked sodas. Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty
+        Texas Triple Burger! You’ve had a hard ride - so take it easy with us.
+    </p>
+</div>
+<div  class="text-md-left">
+    <h2>Entrees</h2>
+    <ul>
+        @foreach (Entree entree in Menu.Entrees())
+        {
+            <li>
+                <div class="menu-item">
+                    <div style="font-size:140%">@entree.ToString()</div>
+                    <div>Price: $@entree.Price</div>
+                    <div>Calories: @entree.Calories</div>
+                </div>
+            </li>
+        }
+    </ul>
+
+    <h2>Sides</h2>
+    <ul>
+        @foreach (Side side in Menu.Sides())
+        {
+            <li>
+                <div class="menu-item">
+                    <div style="font-size:140%">@side</div>
+                    <div>Price: $@side.Price</div>
+                    <div>Calories: @side.Calories</div>
+
+                    <div style="font-size:140%">@(side.Size = Size.Medium)</div>
+                    <div>Price: $@side.Price</div>
+                    <div>Calories: @side.Calories</div>
+
+                    <div style="font-size:140%">@(side.Size = Size.Large)</div>
+                    <div>Price: $@side.Price</div>
+                    <div>Calories: @side.Calories</div>
+
+                </div>
+            </li>
+        }
+    </ul>
+
+    <h2>Drinks</h2>
+    <ul>
+        @foreach(Drink drink in Menu.Drinks())
+        {
+            <li>
+                <div class="meny-item">
+                    @if (drink is Water w)
+                    {
+                        <div>
+                            <div style="font-size:140%">@w</div>
+                            <div>Price: $@drink.Price</div>
+                            <div>Calories: @drink.Calories</div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="font-size:140%">@drink</div>
+                        <div>Price: $@drink.Price</div>
+                        <div>Calories: @drink.Calories</div>
+
+                        <div style="font-size:140%">@(drink.Size = Size.Medium)</div>
+                        <div>Price: $@drink.Price</div>
+                        <div>Calories: @drink.Calories</div>
+
+                        <div style="font-size:140%">@(drink.Size = Size.Large)</div>
+                        <div>Price: $@drink.Price</div>
+                        <div>Calories: @drink.Calories</div>
+                    }
+
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+
